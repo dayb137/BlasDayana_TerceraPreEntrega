@@ -9,14 +9,15 @@ Listado de personas
 {% endblock h1_header %}
 
 {% block main %}
+ <ul>
+   {% for persona in personas  %}
 
-<a href={% url "crear_persona" %}>Crear persona</a>
+   <li>{{persona.nombre}}</li>
 
-<form action={% url "personas" %} method="get">
-    
-    {{formulario}}
+{% else %}
 
-    <input type="submit" value="Buscar">
+ <p>  'No se creo nada...' </p>  
+   {% endfor %}
 
-</form>
+ </ul>
 {% endblock main %}

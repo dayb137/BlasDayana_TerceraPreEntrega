@@ -5,4 +5,4 @@ class CrearPersonaFormulario(forms.Form):
     apellido = forms.CharField(max_length=30)
     
 class BuscarPersonas(forms.Form):
-    nombre = forms.CharField(max_length=20, required=False)
+    nombre = forms.CharField(max_length=30, required=False)

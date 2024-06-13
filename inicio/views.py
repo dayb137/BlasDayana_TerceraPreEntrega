@@ -19,6 +19,5 @@ def crear_persona(request):
     
     return render(request,'inicio/crear.html', {'formulario':formulario})
 
-def ver_personas(request, id):
-    personas = Persona.objects.get(id=id)
-    return render(request, 'inicio/ver_auto.html', {'personas': Persona})
+def personas(request):
+    return render(request, 'inicio/personas.html')

@@ -5,5 +5,6 @@ class Persona(models.Model):
     apellido = models.CharField(max_length=30)
  
     
-    
+    def __str__(self):
+     return f'Soy  {self.nombre} {self.apellido}'
 # Create your models here.

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title_head %}
+Personas
+{% endblock title_head %}
+
+{% block h1_header %}
+Listado de personas
+{% endblock h1_header %}
+
+{% block main %}
+
+<a href={% url "crear_persona" %}>Crear persona</a>
+
+<form action={% url "personas" %} method="get">
+    {{formulario}}
+
+    <input type="submit" value="Buscar">
+
+</form>
+{% endblock main %}

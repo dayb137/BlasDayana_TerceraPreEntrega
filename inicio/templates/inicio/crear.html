@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+
+{% block title_head %}
+Crear Persona
+{% endblock title_head %}
+
+{% block h1_header %}
+Crear persona
+{% endblock h1_header %}
+
+{% block main %}
+
+<form action={% url "crear" %} metodh='POST'>
+{% csrf_token %}
+   
+    {{formulario}}
+
+    <input type="submit" value="Enviar">
+    
+</form>
+{% comment %} Se creo la persona {{persona.nombre}} {{persona.apellido}} {% endcomment %}
+{% endblock main %}

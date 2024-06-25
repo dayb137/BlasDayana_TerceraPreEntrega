@@ -15,9 +15,11 @@ def crear_persona(request):
          persona = Persona(nommbre=datos.get('nombre'), apellido=datos.get('apellido'))
          persona.save()
          return redirect('personas')
+        else:
+            formulario = CrearPersonaFormulario()
+    return render(request,'inicio/crear.html', {'formulario':formulario})
        
     
-    return render(request,'inicio/crear.html', {'formulario':formulario})
 
 def personas(request):
     persona = Persona.objects.all()

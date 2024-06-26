@@ -31,7 +31,7 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href={% url "inicio" %}>Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href={% url "crear_persona" %}>Crear Persona</a></li>
-                        {% comment %} <li class="nav-item"><a class="nav-link" href={% url "persona" %}>Personas</a></li> {% endcomment %}
+                        <li class="nav-item"><a class="nav-link" href={% url "personas"  %}>Personas</a></li> 
 
                     </ul>
                 </div>
@@ -43,7 +43,7 @@
                 <div class="container px-5">
                     <h1 class="masthead-heading mb-0">{% block h1_header %} {% endblock h1_header %}</h1>
                     {% comment %} <h2 class="masthead-subheading mb-0">Will Rock Your Socks Off</h2> {% endcomment %}
-                    <a class="btn btn-primary btn-xl rounded-pill mt-5" href="#scroll">Entrar</a>
+                    {% comment %} <a class="btn btn-primary btn-xl rounded-pill mt-5" href="#scroll">Entrar</a> {% endcomment %}
                 </div>
             </div>
             <div class= {% static "bg-circle-1 bg-circle" %}></div>
@@ -51,7 +51,9 @@
             <div class= {% static "bg-circle-3 bg-circle" %}></div>
             <div class= {% static "bg-circle-4 bg-circle" %}></div>
         </header>
-        {% block main %}{% endblock main %}
+        {% block main %}
+        
+        {% endblock main %}
         <!-- Footer-->
         <footer class="py-5 bg-black">
             <div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; Your Website 2023</p></div>

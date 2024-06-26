@@ -10,7 +10,7 @@ Crear persona
 
 {% block main %}
 
-<form action={% url "crear" %} metodh='POST'>
+<form action={% url "crear_persona" %} metodh='POST'>
 {% csrf_token %}
    
     {{formulario}}

@@ -5,19 +5,20 @@ Personas
 {% endblock title_head %}
 
 {% block h1_header %}
-Listado de personas
+Personas
 {% endblock h1_header %}
 
 {% block main %}
- <ul>
-   {% for persona in personas  %}
 
-   <li>{{persona.nombre}}</li>
-
+{% if persona %}
+    <ul>
+        {% for personas in persona %}
+        <li>{{persona.nombre}}</li>
+        {% endfor %}
+    </ul>
 {% else %}
+<p>No hay Personas creadas...</p>
 
- <p>  'No se creo nada...' </p>  
-   {% endfor %}
+{% endif %}
 
- </ul>
 {% endblock main %}

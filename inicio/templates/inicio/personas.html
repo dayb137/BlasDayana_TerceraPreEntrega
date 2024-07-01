@@ -10,15 +10,28 @@ Personas
 
 {% block main %}
 
+<a href={% url "crear_persona"%}>Crear person</a>
+
+<form action={% url "personas" %} method="get">
+
+    {{formulario}}
+
+    <input type="submit" value='buscar'>
+</form>
+
+
+
 {% if persona %}
     <ul>
-        {% for personas in persona %}
+        {% for persona in Personas %}
         <li>{{persona.nombre}}</li>
+
         {% endfor %}
+
     </ul>
+
 {% else %}
 <p>No hay Personas creadas...</p>
-
 {% endif %}
 
 {% endblock main %}
